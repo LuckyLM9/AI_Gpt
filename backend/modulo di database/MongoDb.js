@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 const port = 3000;
 const secretKey = process.env.SECRET_KEY;
-const MyData = require('./models/MyData');
+const MyData = require('../models/User.js');
 
  app.use(bodyParser.json());
 app.use(cors());
