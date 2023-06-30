@@ -1,0 +1,275 @@
+body {
+  text-align: center;
+  font-size: 30px;
+  padding: 30px;
+  background-color: #1E2025;
+  
+}
+button.submit-validation:hover{
+  background-color: rgb(90, 93, 250);
+}
+.cg-logo.loading.login {
+  animation: rotation 5s infinite linear;
+  display: inline-flex;
+  
+}
+.image-generator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ .image-generator-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+ .image-generator-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+ .image-generator-label {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+ .image-generator-input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+ .image-generator-button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+ .image-generator-button:hover {
+  background-color: #005fa3;
+}
+ .image-generator-img-container {
+  margin-top: 2rem;
+}
+ .image-generator-img-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+ .image-generator-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+ .history-toggle-container {
+  margin-top: 2rem;
+}
+ .history-toggle-button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+ .history-toggle-button:hover {
+  background-color: #005fa3;
+}
+ .history-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ .history-container li {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+ .hidden {
+  display: none;
+}
+.name-login-registrazione{
+  text-align: center;
+  color: #b9bec8,#b0b4bc;
+}
+.name-registrazione{
+ text-align: center;
+}
+.search-history {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+ .search-history button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+ .search-history button:hover {
+  background-color: #3e8e41;
+}
+ .search-history h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+ .search-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ .search-history li {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+.git-logo.login{
+  
+  padding-left: 10px;
+  display:inline-flex;
+  margin-top: -20px;
+}
+h1.Text-Login{
+  display: inline-flex;
+  color: #005167;
+  text-align: right;
+}
+.wrapper form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.app-logo {
+  display: block;
+  margin: 10px auto 20px auto;
+  max-width: 60px;
+}
+
+.wrapper form img {
+  max-width: 50px;
+}
+
+.wrapper form input {
+  background-color: #000;
+  color: #61DAFB;
+  border: 1px solid #005167;
+  font-size: 22px;
+  padding: 10px 15px;
+  flex: 1;
+  border-radius: 4px;
+}
+.button-logo-img{
+  display: inline-flex;
+}
+.Logo-Log-out{
+  padding-left: 5px;
+
+}
+
+.Chat-Bot-Logo{
+ padding-left: 450px;
+}
+.wrapper form button {
+  border: 1px solid #000;
+  font-size: 22px;
+  padding: 10px 20px;
+  background-color: #61DAFB;
+  color: #000;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.wrapper form button:hover {
+  opacity: 0.8;
+}
+
+.response-area {
+  font-size: 20px;
+  max-width: 2100px;
+  display: block;
+  margin: 80px auto 0 auto;
+  text-align:justify;
+  line-height: auto;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow:5px 5px 3px #a3a0a1;
+  background-color:#ffffff;
+ border-style: inset;
+  border: #1E2025;
+  background-color: #acc6e0;
+}
+
+.footer {
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin: 50px 0 40px 0;
+  padding-left: 450px;
+  color: black;
+}
+
+.cg-logo.loading.nav {
+  animation: rotation 2s infinite linear;
+  display: inline-flex;
+  text-align: left;
+}
+.cg-logo.loading {
+  animation: rotation 2s infinite linear;
+}
+.me-auto{
+ animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.git-login {
+  position: 15px;
+  display: inline-block;
+  padding: 15px 36px;
+  margin: 40px 80px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+  background-color: #4169E1;
+  border: none;
+  cursor: pointer;
+}
+.git-login::before {
+  content: '';
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.4s ease-out;
+}
+.git-login:hover {
+  background-color: #fff;
+  color: #4169E1;
+}
+.git-login:hover::before {
+  width: 300px;
+  height: 300px;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
