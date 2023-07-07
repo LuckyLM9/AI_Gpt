@@ -1,11 +1,13 @@
-.rounded-t-5 {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+body {
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 550px) {
-  .rounded-tr-lg-0 {
-    border-top-right-radius: 0.5rem;
-    border-bottom-left-radius: 0rem;
-  }
+h1.Text-Login {
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+  font-weight: bold;
 }

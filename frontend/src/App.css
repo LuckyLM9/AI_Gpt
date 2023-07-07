@@ -1,19 +1,31 @@
+css
 body {
   text-align: center;
   font-size: 30px;
   padding: 30px;
   background-color: #1E2025;
-  
+  cursor: url('../src/components/Pictures/cursor.png'), auto;
 }
-button.submit-validation:hover{
+ button.submit-validation:hover{
   background-color: rgb(90, 93, 250);
 }
-.cg-logo.loading.login {
+.user-data{
+  color: rgb(243, 240, 234);
+}
+.image-generator-container{
+  color:white;
+}
+.form-history{
+  color:white;
+}
+ .cg-logo.loading.login {
   animation: rotation 5s infinite linear;
   display: inline-flex;
-  
 }
-.image-generator-container {
+.no-data-found {
+  color: rgb(255, 255, 255);
+}
+ .image-generator-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,7 +85,7 @@ button.submit-validation:hover{
   padding: 1rem;
   font-size: 1.2rem;
   background-color: #0077cc;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -94,14 +106,14 @@ button.submit-validation:hover{
  .hidden {
   display: none;
 }
-.name-login-registrazione{
+ .name-login-registrazione{
   text-align: center;
   color: #b9bec8,#b0b4bc;
 }
-.name-registrazione{
+ .name-registrazione{
  text-align: center;
 }
-.search-history {
+ .search-history {
   margin: 20px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -121,6 +133,7 @@ button.submit-validation:hover{
  .search-history h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color:white;
 }
  .search-history ul {
   list-style: none;
@@ -131,35 +144,31 @@ button.submit-validation:hover{
   margin-bottom: 5px;
   font-size: 1rem;
 }
-.git-logo.login{
-  
-  padding-left: 10px;
+ .git-logo.login{
+   padding-left: 10px;
   display:inline-flex;
   margin-top: -20px;
 }
-h1.Text-Login{
+ h1.Text-Login{
   display: inline-flex;
   color: #005167;
   text-align: right;
 }
-.wrapper form {
+ .wrapper form {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-
-.app-logo {
+ .app-logo {
   display: block;
   margin: 10px auto 20px auto;
   max-width: 60px;
 }
-
-.wrapper form img {
+ .wrapper form img {
   max-width: 50px;
 }
-
-.wrapper form input {
+ .wrapper form input {
   background-color: #000;
   color: #61DAFB;
   border: 1px solid #005167;
@@ -168,18 +177,16 @@ h1.Text-Login{
   flex: 1;
   border-radius: 4px;
 }
-.button-logo-img{
+ .button-logo-img{
   display: inline-flex;
 }
-.Logo-Log-out{
+ .Logo-Log-out{
   padding-left: 5px;
-
 }
-
-.Chat-Bot-Logo{
+ .Chat-Bot-Logo{
  padding-left: 450px;
 }
-.wrapper form button {
+ .wrapper form button {
   border: 1px solid #000;
   font-size: 22px;
   padding: 10px 20px;
@@ -188,12 +195,10 @@ h1.Text-Login{
   cursor: pointer;
   border-radius: 4px;
 }
-
-.wrapper form button:hover {
+ .wrapper form button:hover {
   opacity: 0.8;
 }
-
-.response-area {
+ .response-area {
   font-size: 20px;
   max-width: 2100px;
   display: block;
@@ -210,27 +215,25 @@ h1.Text-Login{
   border: #1E2025;
   background-color: #acc6e0;
 }
-
-.footer {
+ .footer {
   font-size: 15px;
   letter-spacing: 4px;
   margin: 50px 0 40px 0;
   padding-left: 450px;
   color: black;
 }
-
-.cg-logo.loading.nav {
+ .cg-logo.loading.nav {
   animation: rotation 2s infinite linear;
   display: inline-flex;
   text-align: left;
 }
-.cg-logo.loading {
+ .cg-logo.loading {
   animation: rotation 2s infinite linear;
 }
-.me-auto{
+ .me-auto{
  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.git-login {
+ .git-login {
   position: 15px;
   display: inline-block;
   padding: 15px 36px;
@@ -245,10 +248,9 @@ h1.Text-Login{
   border: none;
   cursor: pointer;
 }
-.git-login::before {
+ .git-login::before {
   content: '';
-  
-  top: 50%;
+   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 0;
@@ -257,19 +259,35 @@ h1.Text-Login{
   border-radius: 50%;
   transition: all 0.4s ease-out;
 }
-.git-login:hover {
+ .git-login:hover {
   background-color: #fff;
   color: #4169E1;
 }
-.git-login:hover::before {
+ .git-login:hover::before {
   width: 300px;
   height: 300px;
 }
-@keyframes rotation {
+ @keyframes rotation {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(359deg);
   }
+}
+ .navLogo-enter {
+  opacity: 0;
+  transform: scale(0.5);
+}
+ .navLogo-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 3000ms, transform 3000ms;
+}
+ .navLogo-exit {
+  opacity: 1;
+}
+ .navLogo-exit-active {
+  opacity: 0;
+  transition: opacity 3000ms;
 }

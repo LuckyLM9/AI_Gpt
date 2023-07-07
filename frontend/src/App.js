@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import Registrazione from "./Pages/Registrazione";
 import Profilo from "./Pages/Profilo";
 import ImgAI from "./Pages/ImgAI";
+
 export default function App() {
  
   //richiesta pagine con React-Router-Dom
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/Profilo" element={<Profilo />} />
           <Route path="/ImgAI" element={<ImgAI />} />
           <Route path="/success" element={<Home />} />
+         
           </Route>
       </Routes>
    

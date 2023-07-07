@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBCardImage, MDBRow, MDBCol, MDBInput, MDBCheckbox, MDBValidation } from 'mdb-react-ui-kit';
+import { MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBCardImage, MDBRow, MDBCol, MDBInput, MDBValidation } from 'mdb-react-ui-kit';
 import LoginImg from '../components/Pictures/6216d4a9e16432bc2f2f5198015787fe.gif';
 import LogoAi from '../components/Pictures/logoAImulti.png';
 import LogoGit from '../components/Pictures/github-square-icon-256x256-7bp3g5mc.png';
-
+import "../Login.css";
 function App() {
   const [token, setToken] = useState(null);
   const [error, setError] = useState(null);

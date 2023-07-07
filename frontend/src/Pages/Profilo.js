@@ -21,9 +21,10 @@ function DataForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5050/chat', formData);
+      const response = await axios.post('http://localhost:5050/updateProfile', formData);
       console.log(response.data);
-      setFormHistory([...formHistory, formData]); // Aggiungi i dati del form alla cronologia
+      setFormHistory([...formHistory, formData]);
+       // Aggiungi i dati del form alla cronologia
       // Aggiorna l'interfaccia utente o esegui altre azioni
     } catch (error) {
       console.error('Errore nell\'invio dei dati:', error);
@@ -91,24 +92,24 @@ function DataForm() {
         {/* ... */}
       </div>
       {isLoading ? (
-        <p>Caricamento dei dati...</p>
-      ) : userData ? (
-        <div className="user-data">
-          <h3>Dati utente da GitHub</h3>
-          <p>
-            <strong>Username:</strong> {userData.login}
-          </p>
-          <p>
-            <strong>Nome completo:</strong> {userData.name}
-          </p>
-          <p>
-            <strong>Email:</strong> {userData.email}
-          </p>
-          {/* Altre informazioni utente da GitHub */}
-        </div>
-      ) : (
-        <p>Non sono stati trovati dati utente.</p>
-      )}
+  <p>Caricamento dei dati...</p>
+) : userData ? (
+  <div className="user-data">
+    <h3>Dati utente da GitHub</h3>
+    <p>
+      <strong>Username:</strong> {userData.login}
+    </p>
+    <p>
+      <strong>Nome completo:</strong> {userData.name}
+    </p>
+    <p>
+      <strong>Email:</strong> {userData.email}
+    </p>
+    {/* Altre informazioni utente da GitHub */}
+  </div>
+) : (
+  <p className="no-data-found">Non sono stati trovati dati utente.</p>
+)}
       </Form>
       <div className="form-history">
         <h3>Cronologia</h3>

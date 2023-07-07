@@ -1,27 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import LogoAi from '../components/Pictures/logoAImulti.png';
 import ChatBot from '../components/Pictures/chatbot-marketing.gif';
 import Navbar from '../components/Navbar';
+
  export function App() {
   const [prompt, setPrompt] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
   const [searchHistory, setSearchHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
-  const [token, setToken] = useState('');
    const handleClearHistory = () => {
     setSearchHistory([]);
   };
    const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-     axios
-      .post("http://localhost:5050/chat", { prompt }, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
+     // Comunicazione con l'API
+    // Importa valori dall'input da 'prompt' all'endpoint dell'API
+    axios
+      .post("http://localhost:5050/chat", { prompt })
       .then((res) => {
         setResponse(res.data);
         setLoading(false);
@@ -34,16 +32,6 @@ import Navbar from '../components/Navbar';
    const handleShowHistory = () => {
     setShowHistory(!showHistory);
   };
-   useEffect(() => {
-    axios.get("http://localhost:5050/token")
-      .then((res) => {
-        const token = res.data.token;
-        setToken(token);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
    return (
     <>
       <Navbar />
