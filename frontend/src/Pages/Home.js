@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import LogoAi from '../components/Pictures/logoAImulti.png';
@@ -9,7 +10,7 @@ import Navbar from '../components/Navbar';
   const [loading, setLoading] = useState(false);
   const [searchHistory, setSearchHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
-  const [voiceEnabled, setVoiceEnabled] = useState(false); // Aggiunto stato per abilitare/disabilitare la voce
+  const [voiceEnabled, setVoiceEnabled] = useState(false);
    const handleClearHistory = () => {
     setSearchHistory([]);
   };
@@ -23,7 +24,6 @@ import Navbar from '../components/Navbar';
         setLoading(false);
         setSearchHistory([...searchHistory, { prompt, response: res.data }]);
         if (voiceEnabled) {
-          // Aggiunto controllo per la voce
           let speech = new SpeechSynthesisUtterance(res.data);
           window.speechSynthesis.speak(speech);
         }
@@ -37,6 +37,16 @@ import Navbar from '../components/Navbar';
   };
    const handleToggleVoice = () => {
     setVoiceEnabled(!voiceEnabled);
+  };
+   const handleSaveHistory = () => {
+    const historyText = searchHistory.map((search) => `Domanda: ${search.prompt}\nRisposta: ${search.response}`).join('\n\n');
+    const element = document.createElement('a');
+    const file = new Blob([historyText], { type: 'text/plain' });
+    element.href = URL.createObjectURL(file);
+    element.download = 'cronologia.txt';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
   };
    return (
     <>
@@ -68,6 +78,9 @@ import Navbar from '../components/Navbar';
           </button>
           <button onClick={handleClearHistory} disabled={searchHistory.length === 0}>
             Pulisci cronologia
+          </button>
+          <button onClick={handleSaveHistory} disabled={searchHistory.length === 0}>
+            Salva cronologia
           </button>
           {showHistory && (
             <>
