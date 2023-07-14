@@ -25,18 +25,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 # App AIGPT e React JS
 Crea la tua app OpenAI
 
-Come usare
+### Come usare
 
 Nella directory del progetto, apri il terminale e installa le dipendenze usando il seguente comando:
 
 npm install
 
-Configurazione
+### Configurazione
 
 Avrài bisogno della chiave API OpenAI dal tuo account OpenAI. Inserisci la chiave nel file .env che s'inserisce nella directory principale del progetto.
 
-Esegui applicazione
+## Esegui applicazione
 Usa il seguente comando:
 
-npm run dev
+## npm run dev
 Apri http://localhost:3000 per visualizzarlo nel tuo browser.
+@LuckyLM9
