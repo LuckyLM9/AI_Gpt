@@ -33,7 +33,7 @@ npm install
 
 Configurazione
 
-Avrài bisogno della chiave API OpenAI dal tuo account OpenAI. Inserisci la chiave nel file .env che si inserisce nella directory principale del progetto.
+Avrài bisogno della chiave API OpenAI dal tuo account OpenAI. Inserisci la chiave nel file .env che s'inserisce nella directory principale del progetto.
 
 Esegui applicazione
 Usa il seguente comando:
