@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-
+import Dropdown from 'react-bootstrap/Dropdown';
 import LogoAi from '../components/Pictures/logoAImulti.png';
 import '../App.css'
 import Button from '../components/Buttonlogout';
 import { CSSTransition } from 'react-transition-group';
-import Switch from 'react-switch';
+
  function ColorSchemesExample() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-   const handleThemeChange = () => {
-    setIsDarkMode(!isDarkMode);
-  }
    return (
     <>
-      <Navbar bg={isDarkMode ? "dark" : "primary"} variant={isDarkMode ? "dark" : "light"} className="Navbar">
+      <Navbar bg="primary" variant="dark">
         <Container>
           <Navbar.Brand>
             <CSSTransition
@@ -31,21 +28,11 @@ import Switch from 'react-switch';
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/Home">AIGPT Chat</Nav.Link>
-            <Nav.Link href="/ImgAI">IMG Filter</Nav.Link>
+            <Nav.Link href="/ImgAI">IMG-Filter</Nav.Link>
             <Nav.Link href="/Profilo">Mio Profilo</Nav.Link>
             <Nav.Link href="/AIControl">PDF</Nav.Link>
           </Nav>
-          <Switch
-            checked={isDarkMode}
-            onChange={handleThemeChange}
-            onColor="#000"
-            offColor="#fff"
-            className='switch-iphone'
-            checkedIcon={false}
-            uncheckedIcon={false}
-            height={24}
-            width={48}
-          />
+          
           <Button></Button>
         </Container>
       </Navbar>

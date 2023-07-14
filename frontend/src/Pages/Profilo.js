@@ -21,9 +21,9 @@ function DataForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5050/updateProfile', formData);
+      const response = await axios.post('http://localhost:5050/userData', formData);
       console.log(response.data);
-      setFormHistory([...formHistory, formData]);
+      setFormHistory([formData]);
        // Aggiungi i dati del form alla cronologia
       // Aggiorna l'interfaccia utente o esegui altre azioni
     } catch (error) {
@@ -36,12 +36,12 @@ function DataForm() {
     try {
       const response = await axios.get('https://api.github.com/user', {
         headers: {
-          Authorization: `Bearer ${process.env.GITHUB_CLIENT_SECRET}`,
+          Authorization: `process.env.GITHUB_CLIENT_SECRET`,
         },
       });
       setUserData(response.data);
     } catch (error) {
-      console.error('Errore nel recupero dei dati utente da GitHub:', error);
+      console.error('Error retrieving user data from GitHub:', error);
     } finally {
       setIsLoading(false);
     }

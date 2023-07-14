@@ -5,9 +5,60 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
+
+div.root{
+  margin: 0 auto;
+}
+.ripple.ripple-surface.btn.btn-primary.mb-4.w-100{
+  margin-top: -20px;
+}
 h1.Text-Login {
   color: #fff;
   text-align: center;
   padding: 50px 0;
   font-weight: bold;
+  margin: 0 auto;
+}
+
+.google-login, .git-login { 
+  background-color: #dd4b39; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 5px #666;
+}
+
+.google-login::before, .git-login::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.4s ease-out;
+}
+
+.google-login:hover, .git-login:hover {
+  background-color: #4169E1;
+  color: #fff;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.google-login:active, .git-login:active {
+  box-shadow: 0 0 #666;
+  transform: translateY(6px);
+}
+
+.google-login:hover::before, .git-login:hover::before {
+  width: 300px;
+  height: 300px;
 }

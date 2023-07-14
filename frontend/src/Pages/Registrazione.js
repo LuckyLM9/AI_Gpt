@@ -14,30 +14,41 @@ import '../Registrazione.css';
 
  function App() {
   const handleRegistration = async () => {
-    try {
-      const nome = document.getElementById('form1').value;
-      const cognome = document.getElementById('form2').value;
-      const email = document.getElementById('form3').value;
-      const password = document.getElementById('form4').value;
-       // Controlla se l'utente esiste già
-      const userExists = await axios.get(`${process.env.MONGODB_URI}/user?email=${email}`);
-      if (userExists.data) {
-        alert('Utente già esistente!');
-        return;
-      }
-       const response = await axios.post(`${process.env.MONGODB_URI}/user`, {
-        nome,
-        cognome,
-        email,
-        password,
-      });
-       const token = response.data.token;
+  try {
+    const nome = document.getElementById('form1').value;
+    const cognome = document.getElementById('form2').value;
+    const email = document.getElementById('form3').value;
+    const password = document.getElementById('form4').value;
+    // Controlla se l'utente esiste già
+    
+    const formData = {
+      nome: nome,
+      cognome: cognome,
+      email: email,
+      password: password,
+    };
+    
+    const response = await fetch("http://localhost:5050/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data); // Puoi fare qualcosa con la risposta del server qui
+      const token = data.token;
       localStorage.setItem('jwtToken', token);
       console.log('Grazie per esserti registrato!');
-    } catch (error) {
-      console.log(error);
+    } else {
+      console.error("Errore durante la richiesta di registrazione");
     }
-  };
+  } catch (error) {
+    console.log(error);
+  }
+};
    const handleLogin = async () => {
     try {
       const email = document.getElementById('form3').value;
@@ -101,7 +112,7 @@ import '../Registrazione.css';
                   Registrati
                 </MDBBtn>
                  <p className='name-registrazione'>Sei già registrato? "Clicca Accedi"</p>
-                <MDBBtn className='mb-4 w-100' href='/Home' onClick={handleLogin}>
+                <MDBBtn className='mb-4 w-100' href='/' onClick={handleLogin}>
                   Accedi
                 </MDBBtn>
               </MDBCardBody>

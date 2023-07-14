@@ -3,27 +3,30 @@ import axios from 'axios';
 import LogoAi from '../components/Pictures/logoAImulti.png';
 import ChatBot from '../components/Pictures/chatbot-marketing.gif';
 import Navbar from '../components/Navbar';
-
  export function App() {
   const [prompt, setPrompt] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
   const [searchHistory, setSearchHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
+  const [voiceEnabled, setVoiceEnabled] = useState(false); // Aggiunto stato per abilitare/disabilitare la voce
    const handleClearHistory = () => {
     setSearchHistory([]);
   };
    const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-     // Comunicazione con l'API
-    // Importa valori dall'input da 'prompt' all'endpoint dell'API
-    axios
+     axios
       .post("http://localhost:5050/chat", { prompt })
       .then((res) => {
         setResponse(res.data);
         setLoading(false);
         setSearchHistory([...searchHistory, { prompt, response: res.data }]);
+        if (voiceEnabled) {
+          // Aggiunto controllo per la voce
+          let speech = new SpeechSynthesisUtterance(res.data);
+          window.speechSynthesis.speak(speech);
+        }
       })
       .catch((err) => {
         console.error(err);
@@ -31,6 +34,9 @@ import Navbar from '../components/Navbar';
   };
    const handleShowHistory = () => {
     setShowHistory(!showHistory);
+  };
+   const handleToggleVoice = () => {
+    setVoiceEnabled(!voiceEnabled);
   };
    return (
     <>
@@ -53,9 +59,12 @@ import Navbar from '../components/Navbar';
           <button type="submit">Invio</button>
         </form>
         <p className="response-area">{loading ? 'Caricamento...' : response}</p>
-         <div className="search-history">
+        <div className="search-history">
           <button onClick={handleShowHistory}>
             {showHistory ? 'Nascondi cronologia' : 'Mostra cronologia'}
+          </button>
+          <button onClick={handleToggleVoice}>
+            {voiceEnabled ? 'Disattiva voce' : 'Attiva voce'}
           </button>
           <button onClick={handleClearHistory} disabled={searchHistory.length === 0}>
             Pulisci cronologia

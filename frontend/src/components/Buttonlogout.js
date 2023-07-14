@@ -39,14 +39,15 @@ function LoadingButton() {
  
   return ( 
     <Button 
-      variant="secondary" 
+      variant="secondary"
       disabled={isLoading} 
       href="/" 
       onClick={!isLoading ? handleClick : null} 
+      className="sparkle-effect" 
     > 
       {isLoading ? 'Log-Out in corso...' : 'Log-Out'} 
     </Button> 
-  ); 
+  );
 } 
  
 export default LoadingButton

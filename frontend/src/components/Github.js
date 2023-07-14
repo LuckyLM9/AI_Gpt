@@ -1,6 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, useState} from 'react';
 import GitHubLogin from 'react-github-login';
 
+const [username, setusername] = useState();
+const [usermail, setusermail] = useState();
+const pass =(githubResponse) =>{
+  console.log(githubResponse);
+
+  setusername(githubResponse.clientId.json);
+}
 class App extends Component {
   state = {
     token: null
