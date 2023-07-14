@@ -1,6 +1,6 @@
-# ChatGPT & React JS App
+# AIGPT & React JS App
 
-Build your own ChatGPT App by webstylepress.
+Build your own OpenAI
 
 ## How to Use
 
@@ -20,4 +20,20 @@ Use following command:
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+# ITA
 
+# App AIGPT e React JS
+Crea la tua app OpenAI
+
+Come usare
+Nella directory del progetto, apri il terminale e installa le dipendenze usando il seguente comando:
+
+npm install
+Configurazione
+Avrà bisogno della chiave API OpenAI dal tuo account OpenAI. Inserisci questa chiave nel file .env che si trova nella directory principale del progetto.
+
+Esegui applicazione
+Usa il seguente comando:
+
+npm run dev
+Apri http://localhost:3000 per visualizzarlo nel tuo browser.
