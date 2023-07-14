@@ -10,7 +10,7 @@ In the project directory, open terminal and install dependencies by using follow
 
 ### Configuration
 
-It will need OpenAI API key from your OpenAI account. Place this key in .env file that is in project root directory.
+It will need OpenAI API key from your OpenAI account. Place your key in .env file that put on project root directory.
 
 ### Run Application
 
@@ -26,11 +26,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Crea la tua app OpenAI
 
 Come usare
+
 Nella directory del progetto, apri il terminale e installa le dipendenze usando il seguente comando:
 
 npm install
+
 Configurazione
-Avrà bisogno della chiave API OpenAI dal tuo account OpenAI. Inserisci questa chiave nel file .env che si trova nella directory principale del progetto.
+
+Avrài bisogno della chiave API OpenAI dal tuo account OpenAI. Inserisci la chiave nel file .env che si inserisce nella directory principale del progetto.
 
 Esegui applicazione
 Usa il seguente comando:
