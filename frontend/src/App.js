@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import ReactDOM from "react-dom/client";
 import Registrazione from "./Pages/Registrazione";
-import Profilo from "./Pages/Profilo";
+import FileViewer from "./Pages/FileViewer";
 import ImgAI from "./Pages/ImgAI";
 import AIControl from "../src/components/Tempo Libero/modules/AIControl";
 
@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/" element={<Login />} />
         <Route path="/Home" element={<Home />} />
           <Route path="/Registrazione" element={<Registrazione />} />
-          <Route path="/Profilo" element={<Profilo />} />
+          <Route path="/FileViewer" element={<FileViewer />} />
           
           <Route path="/ImgAI" element={<ImgAI />} />
           <Route path="/success" element={<Home />} />

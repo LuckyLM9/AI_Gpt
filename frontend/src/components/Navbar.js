@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-
+import { FaLock } from 'react-icons/fa';
 import LogoAi from '../components/Pictures/logoAImulti.png';
 import '../App.css'
 import Button from '../components/Buttonlogout';
@@ -32,8 +32,8 @@ import Switch from 'react-switch';
           <Nav className="me-auto">
             <Nav.Link href="/Home">AIGPT Chat</Nav.Link>
             <Nav.Link href="/ImgAI">IMG Filter</Nav.Link>
-            <Nav.Link href="/Profilo">Mio Profilo</Nav.Link>
-            <Nav.Link href="/AIControl">PDF</Nav.Link>
+            <Nav.Link href="/FileViewer">FileViewer</Nav.Link>
+            <Nav.Link href="/AIControl">AIControl <FaLock /></Nav.Link>
           </Nav>
           <Switch
             checked={isDarkMode}
